@@ -26,7 +26,7 @@ except Exception:
     sr_stocks = pd.Series(df_stocks.code.values)
     sr_stocks.to_csv('stocks.csv', index=False, encoding="utf-8")
 
-SR_CODE_STOCK = sr_stocks[180:190]
+SR_CODE_STOCK = sr_stocks
 # print(SR_CODE_STOCK)
 # SR_CODE_STOCK = sr_stocks.head(10)
 

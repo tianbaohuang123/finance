@@ -63,8 +63,18 @@ class ZjhSpider(scrapy.Spider):
         item["pe_stock"] = response.xpath("//tbody[@class='tc']/tr/td[9]/text()").extract_first()
         item["pb_stock"] = response.xpath("//tbody[@class='tc']/tr/td[10]/text()").extract_first()
 
-        item["pe_industry"] = self.dict_code_industry_and_pe[item["code_industry"]]
-        item["pb_industry"] = self.dict_code_industry_and_pb[item["code_industry"]]
+        # if None is item["code_industry"]:
+        #     print(dict(item))
+
+        # if item num is None change to '--'
+        item["code_industry"] = item["code_industry"] if None is not item["code_industry"] else "--"
+        item["pe_stock"] = item["pe_stock"] if None is not item["pe_stock"] else "--"
+        item["pb_stock"] = item["pb_stock"] if None is not item["pb_stock"] else "--"
+
+        item["pe_industry"] = self.dict_code_industry_and_pe[item["code_industry"]] \
+                                    if "--" is not item["code_industry"] else "--"
+        item["pb_industry"] = self.dict_code_industry_and_pb[item["code_industry"]] \
+                                    if "--" is not item["code_industry"] else "--"
 
         item['date_time'] = self.trade_day
 
