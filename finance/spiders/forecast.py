@@ -43,8 +43,8 @@ class ForecastSpider(scrapy.Spider):
 
         self.code_stock = self.settings["SR_CODE_STOCK"][self.index_stock]
 
-        print("index: " + str(self.index_stock))
-        print("code_stock: " + str(self.code_stock))
+        # print("index: " + str(self.index_stock))
+        # print("code_stock: " + str(self.code_stock))
 
         next_url = 'http://basic.10jqka.com.cn/{}/worth.html'.format(self.code_stock)
         yield scrapy.Request(
