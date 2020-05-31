@@ -1,30 +1,20 @@
 # finance
 scrapy of finance
 
-.
-├── finance
-│   ├── __init__.py
-│   ├── items.py             **forecast item and pe & pb item**
-│   ├── middlewares.py       **agent middleware**
-│   ├── pipelines.py         **deal scrapy data**
-│   ├── __pycache__
-│   │   ├── __init__.cpython-36.pyc
-│   │   ├── items.cpython-36.pyc
-│   │   ├── middlewares.cpython-36.pyc
-│   │   ├── pipelines.cpython-36.pyc
-│   │   └── settings.cpython-36.pyc
-│   ├── settings.py           **global params**
-│   └── spiders
-│       ├── forecast.py       **spider of forecast data**
-│       ├── __init__.py
-│       ├── __pycache__
-│       │   ├── forecast.cpython-36.pyc
-│       │   ├── __init__.cpython-36.pyc
-│       │   └── zjh.cpython-36.pyc
-│       └── zjh.py            **spider of pe pb data**
-├── finance_zjh.csv           **create after run zjh spider**
-├── scrapy.cfg
-└── stocks.csv                **create after any spider**
+. <br/>
+├── finance <br/>
+│   ├── __init__.py <br/>
+│   ├── items.py             --- **forecast item and pe & pb item** <br/>
+│   ├── middlewares.py       --- **agent middleware** <br/>
+│   ├── pipelines.py         --- **deal scrapy data** <br/>
+│   ├── settings.py          --- **global params** <br/>
+│   └── spiders <br/>
+│       ├── forecast.py      --- **spider of forecast data** <br/>
+│       ├── __init__.py <br/>
+│       └── zjh.py           --- **spider of pe pb data** <br/>
+├── finance_zjh.csv          --- **create after run zjh spider** <br/>
+├── scrapy.cfg <br/>
+└── stocks.csv               --- **create after any spider** <br/>
 
 ## how to use
 * step1: clone code
